@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiamaka Blessing | Backend Developer</title>
+  <meta name="description" content="Backend Developer specializing in Node.js, Express.js, and PostgreSQL. Building production-ready systems for real communities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Canvas for starfield -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Ambient glow orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- ═══════════════════════════════════════ NAVBAR -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">
+      <span>C</span><span>B</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn-hire">Hire Me</a>
+    <button class="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════ HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Open to opportunities</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line" data-text="Chiamaka">Chiamaka</span>
+        <span class="name-line name-line-2" data-text="Blessing">Blessing</span>
+      </h1>
+      <div class="hero-title-wrap">
+        <span class="hero-title">Backend Developer</span>
+      </div>
+      <p class="hero-tagline">Building powerful, scalable systems that power<br />real solutions for real-world challenges.</p>
+      <div class="hero-socials">
+        <a href="https://github.com/morningstarwebsite" target="_blank" rel="noopener" aria-label="GitHub" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/chiamakablessing" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="mailto:chimaxblessing4@gmail.com" aria-label="Email" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-ghost">Let's Talk</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 — About</div>
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="about-img-frame"> 
+            <!-- Replace src with your actual photo path -->
+            <img src="images/profile.JPG" alt="Chiamaka Blessing" class="about-img" id="aboutPhoto" />
+            <div class="img-placeholder" id="imgPlaceholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span></span>
+            </div>
+          </div>
+          <div class="about-img-accent"></div>
+        </div>
+        <div class="about-content">
+          <h2 class="section-heading">Crafting backends that<br /><em>actually work.</em></h2>
+          <p class="about-text">
+            I'm a Backend Developer with a chemical engineer's precision and a builder's drive. Focused on designing secure, scalable systems and turning complex ideas into practical digital solutions.
+          </p>
+          <p class="about-text">
+            My most significant work is <strong>Ocevara</strong> — a sustainable fisheries management platform I led from architecture to deployment, built for Nigerian coastal communities. Real problems. Real users. Real impact.
+          </p>
+          <p class="about-text">
+            I care about clean architecture, secure authentication flows, and writing code that a team can maintain and build on — not just code that runs today.
+          </p>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <div class="stat-num">2+</div>
+              <div class="stat-label">Production Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="stat-num">5+</div>
+              <div class="stat-label">Technologies Mastered</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="stat-num">1</div>
+              <div class="stat-label">Cross-functional Team Led</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">02 — Work</div>
+      <h2 class="section-heading">Featured Projects</h2>
+      <p class="section-sub">Systems built with intention. Every line serves a purpose.</p>
+
+      <div class="projects-list">
+
+        <!-- Project 1 — Ocevara (Featured) -->
+        <article class="project-card project-featured">
+          <div class="project-img-wrap">
+            <div class="project-img-bg" style="background: linear-gradient(135deg, #0d2e2e 0%, #0a4a3a 50%, #0d3d2e 100%);">
+              <div class="project-img-pattern">
+                <svg viewBox="0 0 400 250" class="project-svg">
+                  <defs>
+                    <pattern id="wave" x="0" y="0" width="80" height="40" patternUnits="userSpaceOnUse">
+                      <path d="M0 20 Q20 5 40 20 Q60 35 80 20" fill="none" stroke="rgba(0,200,150,0.15)" stroke-width="1.5"/>
+                    </pattern>
+                  </defs>
+                  <rect width="400" height="250" fill="url(#wave)"/>
+                  <circle cx="200" cy="125" r="60" fill="none" stroke="rgba(0,200,150,0.2)" stroke-width="1"/>
+                  <circle cx="200" cy="125" r="40" fill="none" stroke="rgba(0,200,150,0.15)" stroke-width="1"/>
+                  <circle cx="200" cy="125" r="20" fill="rgba(0,200,150,0.1)" stroke="rgba(0,200,150,0.3)" stroke-width="1"/>
+                  <text x="200" y="131" text-anchor="middle" fill="rgba(0,200,150,0.6)" font-size="14" font-family="JetBrains Mono">OCEVARA</text>
+                </svg>
+              </div>
+            </div>
+            <div class="project-featured-badge">Featured</div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-year">2024 – Present</span>
+              <span class="project-type">Lead Backend Developer</span>
+            </div>
+            <h3 class="project-title">Ocevara</h3>
+            <p class="project-subtitle">Sustainable Fisheries Management Platform</p>
+            <p class="project-desc">
+              A production-ready backend platform serving Nigerian coastal fishing communities. Architected OTP authentication system, built a rule-based recommendation engine with seasonal fishing calendars with an AI camera and chat integration, integrated Africa's Talking SMS and SendGrid email services, and designed PostGIS-powered geospatial data models.
+            </p>
+            <div class="project-highlights">
+              <div class="highlight">
+                <span class="highlight-dot"></span>
+                OTP-gated authentication (verified users)
+              </div>
+              <div class="highlight">
+                <span class="highlight-dot"></span>
+                Rule-based recommendation engine with seasonal logic with AI camera and chat integration
+              </div>
+              <div class="highlight">
+                <span class="highlight-dot"></span>
+                SMS + Email integration (Africa's Talking & SendGrid)
+              </div>
+              <div class="highlight">
+                <span class="highlight-dot"></span>
+                PostGIS geospatial queries + Flutter mobile collaboration
+              </div>
+            </div>
+            <div class="project-stack">
+              <span class="stack-pill">Node.js</span>
+              <span class="stack-pill">Express.js</span>
+              <span class="stack-pill">PostgreSQL</span>
+              <span class="stack-pill">PostGIS</span>
+              <span class="stack-pill">JWT</span>
+              <span class="stack-pill">Africa's Talking</span>
+              <span class="stack-pill">SendGrid</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/morningstarwebsite/Ocevara-" target="_blank" class="project-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+              <a href="https://ocevara-lamz.onrender.com/" target="_blank" class="project-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 — BookTracker -->
+        <article class="project-card">
+          <div class="project-img-wrap">
+            <div class="project-img-bg" style="background: linear-gradient(135deg, #0d1f2e 0%, #0a2a3a 50%, #0d2030 100%);">
+              <img src="images/wood-antique-shelf-furniture-bookcase-library-956989-pxhere.com.jpg" alt="BookTracker preview" class="project-preview-img" />
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-year">2025</span>
+              <span class="project-type">Full-Stack Developer</span>
+            </div>
+            <h3 class="project-title">BookTracker</h3>
+            <p class="project-subtitle">Personal Book Management System</p>
+            <p class="project-desc">
+              A full-stack book tracking application with CRUD operations, PostgreSQL backend, and Open Library API integration for automatic cover image fetching. Built as part of Angela Yu's Complete Full-Stack Web Development Bootcamp on Udemy.
+            </p>
+            <div class="project-stack">
+              <span class="stack-pill">Node.js</span>
+              <span class="stack-pill">Express.js</span>
+              <span class="stack-pill">PostgreSQL</span>
+              <span class="stack-pill">EJS</span>
+              <span class="stack-pill">Open Library API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/morningstarwebsite/capstone-project-book-tracker" target="_blank" class="project-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                View Code
+              </a>
+              <a href="https://ocevara-lamz.onrender.com/" target="_blank" class="project-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">03 — Stack</div>
+      <h2 class="section-heading">Skills & Technologies</h2>
+      <p class="section-sub">The tools I reach for when building production systems.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-card" data-skill="Node.js">
+          <div class="skill-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon-img" />
+          </div>
+          <span class="skill-name">Node.js</span>
+        </div>
+
+        <div class="skill-card" data-skill="Express.js">
+          <div class="skill-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js" class="skill-icon-img skill-icon-invert" />
+          </div>
+          <span class="skill-name">Express.js</span>
+        </div>
+
+        <div class="skill-card" data-skill="PostgreSQL">
+          <div class="skill-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-icon-img" />
+          </div>
+          <span class="skill-name">PostgreSQL</span>
+        </div>
+
+        <div class="skill-card" data-skill="JavaScript">
+          <div class="skill-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon-img" />
+          </div>
+          <span class="skill-name">JavaScript</span>
+        </div>
+
+        <div class="skill-card" data-skill="Git">
+          <div class="skill-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon-img" />
+          </div>
+          <span class="skill-name">Git</span>
+        </div>
+
+        <div class="skill-card" data-skill="HTML5">
+          <div class="skill-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon-img" />
+          </div>
+          <span class="skill-name">HTML5</span>
+        </div>
+
+        <div class="skill-card" data-skill="CSS3">
+          <div class="skill-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="skill-icon-img" />
+          </div>
+          <span class="skill-name">CSS3</span>
+        </div>
+
+        <div class="skill-card" data-skill="Postman">
+          <div class="skill-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" class="skill-icon-img" />
+          </div>
+          <span class="skill-name">Postman</span>
+        </div>
+
+      </div>
+
+      <!-- Additional competencies -->
+      <div class="competencies">
+        <div class="comp-group">
+          <h4 class="comp-title">Backend Concepts</h4>
+          <div class="comp-tags">
+            <span>REST API Design</span>
+            <span>JWT Authentication</span>
+            <span>OTP Flows</span>
+            <span>Database Migrations</span>
+            <span>MVC Architecture</span>
+            <span>PostGIS (Geospatial)</span>
+          </div>
+        </div>
+        <div class="comp-group">
+          <h4 class="comp-title">Integrations</h4>
+          <div class="comp-tags">
+            <span>Africa's Talking (SMS)</span>
+            <span>SendGrid (Email)</span>
+            <span>Open Library API</span>
+            <span>AI Integration</span>
+          </div>
+        </div>
+        <div class="comp-group">
+          <h4 class="comp-title">Currently Learning</h4>
+          <div class="comp-tags comp-tags-accent">
+            <span>TypeScript</span>
+            <span>Advanced Node.js Patterns</span>
+            <span>NestJS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">04 — Contact</div>
+      <h2 class="section-heading">Let's Build Something<br /><em>Together.</em></h2>
+      <p class="section-sub">Open to backend roles, collaborations, and opportunities across Africa and beyond.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:chimaxblessing4@gmail.com" class="contact-val">chimaxblessing4@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <a href="https://www.linkedin.com/in/chiamakablessing" target="_blank" class="contact-val">chiamakablessing</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">GitHub</div>
+              <a href="https://github.com/morningstarwebsite" target="_blank" class="contact-val">morningstarwebsite</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Location</div>
+              <span class="contact-val">Onitsha, Anambra · Nigeria</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <span class="btn-text">Send Message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+          <div class="form-status" id="formStatus"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span>C</span><span>B</span>
+          </div>
+          <p>Chiamaka Blessing Umeh<br />Backend Developer · Nigeria</p>
+          <div class="footer-socials">
+            <a href="https://github.com/morningstarwebsite" target="_blank" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/chiamakablessing" target="_blank" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:chimaxblessing4@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Get In Touch</h4>
+          <ul>
+            <li><a href="mailto:chimaxblessing4@gmail.com">EMAIL</a></li>
+            <li><a href="https://github.com/morningstarwebsite" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/chiamakablessing" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span id="currentYear"></span> Chiamaka .B. All rights reserved.</span>
+        <span class="footer-credit">Built with passion </span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
